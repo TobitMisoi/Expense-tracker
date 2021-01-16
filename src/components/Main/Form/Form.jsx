@@ -15,6 +15,7 @@ import useStyles from "./styles";
 import { incomeCategories, expenseCategories } from '../../../constants/categories';
 import formatDate from "../../../utils/formatDate";
 import { useSpeechContext } from "@speechly/react-client";
+import CustomizedSnackbar from "../../Snackbar/Snackbar";
 
 const initialState = {
     amount: '',
@@ -37,9 +38,13 @@ const Form = () => {
         if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
         // Modify the state by adding id
         const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4() }
+
+        setOpen(true);
         addTransaction(transaction);
         setFormData(initialState);
     }
+
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         if (segment) {
@@ -81,6 +86,7 @@ const Form = () => {
 
     return (
         <Grid container spacing={2}>
+            <CustomizedSnackbar open={open} setOpen={setOpen} />
             <Grid item xs={12}>
                 <Typography align="center" variant="subtitle2" gutterBottom>
                     {segment && segment.words.map((w) => w.value).join(" ")}
