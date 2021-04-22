@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Snackbar } from '@material-ui/core'
 import { Alert as MuiAlert } from '@material-ui/lab'
 
 import useStyles from './styles'
 
+// eslint-disable-next-line react/prop-types
 const CustomizedSnackbar = ({ open, setOpen }) => {
   const classes = useStyles()
 
@@ -36,11 +36,6 @@ const CustomizedSnackbar = ({ open, setOpen }) => {
       </Snackbar>
     </div>
   )
-}
-
-CustomizedSnackbar.propTypes = {
-  open: PropTypes.bool,
-  setOpen: PropTypes.bool
 }
 
 export default CustomizedSnackbar
