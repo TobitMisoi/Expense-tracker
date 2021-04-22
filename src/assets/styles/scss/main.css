@@ -1,0 +1,30 @@
+*,
+body,
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.content {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #04de37;
+}
+
+.content .container {
+  border: 1px solid;
+  height: 100%;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

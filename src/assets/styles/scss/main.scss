@@ -1,0 +1,23 @@
+*,
+body,
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.content {
+  padding: 1rem 0;
+  display: flex;
+  border: 1px solid;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #04de37;
+  .container {
+    border: 1px solid;
+    height: 100%;
+    width: 100%;
+  }
+}
