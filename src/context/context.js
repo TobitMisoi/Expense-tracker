@@ -49,3 +49,5 @@ export const Provider = ({ children }) => {
 Provider.propTypes = {
   children: PropTypes.element
 }
+
+export default Provider
