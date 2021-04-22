@@ -5,8 +5,11 @@ import PropTypes from 'prop-types'
 
 import useStyles from './styles'
 
-const CustomizedSnackbar = ({ open, setOpen }) => {
+const CustomizedSnackbar = (props) => {
   const classes = useStyles()
+
+  // eslint-disable-next-line react/prop-types
+  const { open, setOpen } = props
 
   const handleClose = (e, reason) => {
     if (reason === 'clickaway') return
@@ -39,8 +42,7 @@ const CustomizedSnackbar = ({ open, setOpen }) => {
 }
 
 CustomizedSnackbar.propTypes = {
-  open: PropTypes.bool,
-  setOpen: PropTypes.bool
+  open: PropTypes.bool
 }
 
 export default CustomizedSnackbar
