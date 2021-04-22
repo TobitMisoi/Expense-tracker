@@ -85,14 +85,14 @@ const Form = () => {
     }, [segment]);
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} >
             <CustomizedSnackbar open={open} setOpen={setOpen} />
             <Grid item xs={12}>
                 <Typography align="center" variant="subtitle2" gutterBottom>
                     {segment && segment.words.map((w) => w.value).join(" ")}
                 </Typography>
             </Grid>
-            <Grid xs={6}>
+            <Grid item xs={6}>
                 <FormControl fullWidth>
                     <InputLabel>Type</InputLabel>
                     <Select value={formData.type} onChange={e => setFormData({ ...formData, type: e.target.value })}>
@@ -105,7 +105,7 @@ const Form = () => {
                 <FormControl fullWidth>
                     <InputLabel>Category</InputLabel>
 
-                    {/* ........................................|callback function............................................| */}
+                    {/* ........................................|callback function |............................................| */}
                     <Select value={formData.category} onChange={e => setFormData({ ...formData, category: e.target.value })}>
                         {selectedCategory.map((c) => <MenuItem key={c.type} value={c.type}>{c.type}</MenuItem>)}
                     </Select>

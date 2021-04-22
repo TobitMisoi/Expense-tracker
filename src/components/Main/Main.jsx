@@ -16,7 +16,7 @@ import useStyles from "./styles";
 const Main = () => {
   const classes = useStyles();
   const { balance } = useContext(ExpenseTrackerContext);
-  console.log(balance)
+  // console.log(balance)
 
   return (
     <Card classes={classes.root}>
