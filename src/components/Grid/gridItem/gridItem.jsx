@@ -2,11 +2,7 @@ import { Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const styles = {
-  grid: {
-    padding: '0 15px'
-  }
-}
+import styles from './styles'
 
 const useStyles = makeStyles(styles)
 
