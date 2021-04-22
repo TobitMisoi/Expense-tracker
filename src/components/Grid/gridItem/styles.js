@@ -3,3 +3,4 @@ export const styles = {
     padding: '0 15px'
   }
 }
+export default styles

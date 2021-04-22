@@ -6,3 +6,5 @@ export const styles = {
     justifyContent: 'center'
   }
 }
+
+export default styles
