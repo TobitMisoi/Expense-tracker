@@ -8,7 +8,10 @@ const useStyles = makeStyles(styles)
 
 export default function GridItem(props) {
   const classes = useStyles()
+
+  // eslint-disable-next-line react/prop-types
   const { children, ...rest } = props
+
   return (
     <Grid item className={classes.grid} {...rest}>
       {children}
