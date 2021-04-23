@@ -1,8 +1,4 @@
-import {
-  blackColor,
-  whiteColor,
-  hexToRgb
-} from '../../assets/styles/jss/main'
+import { blackColor, whiteColor, hexToRgb } from '../../assets/styles/jss/main'
 
 const styles = {
   card: {
