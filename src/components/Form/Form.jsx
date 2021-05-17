@@ -7,9 +7,7 @@ import formatDate from '../../utils/formatDate'
 import { useSpeechContext } from '@speechly/react-client'
 import CustomizedSnackbar from '../Snackbar/Snackbar'
 import { GridItem, GridContainer } from '../Grid'
-import { MenuItem, Typography } from '@material-ui/core'
-import { Button, FormControl, InputLabel, TextField } from '@material-ui/core'
-import { Select } from '@material-ui/core'
+import {MenuItem, Typography, Button, FormControl, InputLabel, TextField, Select } from '@material-ui/core'
 
 const initialState = {
   amount: '',
@@ -156,7 +154,7 @@ const Form = () => {
             }
           />
         </GridItem>
-     <GridItem xs={12}>
+     <GridItem>
           <Button
           className={classes.button}
           variant='outlined'
