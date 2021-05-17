@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React from 'react'
 import { ExpenseTrackerContext } from '../../context/context'
 import { v4 as uuidv4 } from 'uuid'
 import useStyles from './styles'
@@ -19,15 +19,15 @@ const initialState = {
 const Form = () => {
   const classes = useStyles()
 
-  const [formData, setFormData] = useState(initialState)
-  const { addTransaction } = useContext(ExpenseTrackerContext)
+  const [formData, setFormData] = React.useState(initialState)
+  const { addTransaction } = React.useContext(ExpenseTrackerContext)
 
   const { segment } = useSpeechContext()
 
   const selectedCategory =
     formData.type === 'Income' ? incomeCategories : expenseCategories
 
-  const createTransaction = () => {
+  const createTransaction = React.useCallback(() => {
     if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-'))
       return
     // Modify the state by adding id
@@ -40,11 +40,15 @@ const Form = () => {
     setOpen(true)
     addTransaction(transaction)
     setFormData(initialState)
-  }
+  })
 
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = React.useState(false)
 
-  useEffect(() => {
+//TODO: Fix a bug here
+
+  React.useEffect(() => {
+  console.log(segment)
+
     if (segment) {
       if (segment.intent.intent === 'add_expense') {
         setFormData({ ...formData, type: 'Expense' })
@@ -100,7 +104,6 @@ const Form = () => {
     <>
       <GridContainer>
         <CustomizedSnackbar open={open} setOpen={setOpen} />
-
         <GridItem xs={6}>
           <FormControl fullWidth>
             <InputLabel>Type</InputLabel>
@@ -166,13 +169,11 @@ const Form = () => {
      </GridItem>
       </GridContainer>
       <GridContainer>
-        <GridItem>
           <GridItem xs={12}>
             <Typography>
               {segment && segment.words.map((item) => item.value.join('.'))}
             </Typography>
           </GridItem>
-        </GridItem>
       </GridContainer>
     </>
   )
