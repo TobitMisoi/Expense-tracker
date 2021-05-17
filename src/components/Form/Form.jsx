@@ -156,7 +156,8 @@ const Form = () => {
             }
           />
         </GridItem>
-        <Button
+     <GridItem xs={12}>
+          <Button
           className={classes.button}
           variant='outlined'
           color='primary'
@@ -164,6 +165,7 @@ const Form = () => {
         >
           Create
         </Button>
+     </GridItem>
       </GridContainer>
       <GridContainer>
         <GridItem>
