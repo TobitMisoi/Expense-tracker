@@ -25,7 +25,7 @@ const CustomizedSnackbar = (props) => {
           horizontal: 'right'
         }}
         open={open}
-        autoHideDuration={3000}
+        autoHideDuration={5000}
         onClose={handleClose}
       >
         <MuiAlert

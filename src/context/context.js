@@ -19,8 +19,12 @@ export const Provider = ({ children }) => {
   }
 
   const addTransaction = (transaction) => {
+
+    if(transaction.amount === "") {
+      return null
+    }
     dispatch({
-      type: 'ADD_TRANSACTION',
+      type: 'ADD_TRANSACTION',  
       payload: transaction
     })
   }

@@ -36,6 +36,7 @@ const Form = () => {
       amount: Number(formData.amount),
       id: uuidv4()
     }
+    
 
     setOpen(true)
     addTransaction(transaction)
@@ -47,8 +48,6 @@ const Form = () => {
 //TODO: Fix a bug here
 
   React.useEffect(() => {
-  console.log(segment)
-
     if (segment) {
       if (segment.intent.intent === 'add_expense') {
         setFormData({ ...formData, type: 'Expense' })
@@ -140,6 +139,7 @@ const Form = () => {
             type='number'
             label='Enter Amount'
             fullWidth
+            required
             value={formData.amount}
             onChange={(e) =>
               setFormData({ ...formData, amount: e.target.value })
