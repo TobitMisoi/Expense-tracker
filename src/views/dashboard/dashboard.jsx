@@ -1,32 +1,32 @@
-import React from 'react'
-import { Icon, makeStyles } from '@material-ui/core'
-import { FaCreditCard } from 'react-icons/fa'
-import { GiBank } from 'react-icons/gi'
+import React from "react";
+import { Icon, makeStyles } from "@material-ui/core";
+import { FaCreditCard } from "react-icons/fa";
+import { GiBank } from "react-icons/gi";
 
-import { GridContainer, GridItem } from '../../components/Grid'
+import { GridContainer, GridItem } from "../../components/Grid";
 import {
   CardHeader,
   CardIcon,
   CardFooter,
-  CardBody
-} from '../../components/Card'
-import { Danger, Warning } from '../../components/typography'
-import Card from '../../components/Card/card'
-import styles from './styles'
-import Form from '../../components/Form/Form'
-import Figure from './components/figure'
-import { Lists } from '../../components/Main'
-import Chart from './components/chartData'
+  CardBody,
+} from "../../components/Card";
+import { Danger, Warning } from "../../components/typography";
+import Card from "../../components/Card/card";
+import styles from "./styles";
+import Form from "../../components/Form/Form";
+import Figure from "./components/figure";
+import { Lists } from "../../components/Main";
+import Chart from "./components/chartData";
 
-const useStyles = makeStyles(styles)
+const useStyles = makeStyles(styles);
 
 function dashboard() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <>
       <GridContainer>
-        <GridItem xs={12} sm={6} md={3}>
+        <GridItem xs={12} sm={6} md={6}>
           <Card>
             <CardHeader color='primary'>
               <h2>Expense tracker</h2>
@@ -89,7 +89,7 @@ function dashboard() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        <GridItem>
+        <GridItem lg={6} xs={12}>
           <Card>
             <CardHeader>
               <h4>Recent Activity</h4>
@@ -101,7 +101,7 @@ function dashboard() {
         </GridItem>
       </GridContainer>
     </>
-  )
+  );
 }
 
-export default dashboard
+export default dashboard;
