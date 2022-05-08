@@ -4,8 +4,9 @@ import React from "react";
 //   PushToTalkButton,
 //   PushToTalkButtonContainer
 // } from '@speechly/react-ui'
-// import { Dashboard } from './views'
+import { Dashboard } from './views'
 import Home from "./views/home";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 const App = () => {
   return (
@@ -19,7 +20,12 @@ const App = () => {
         <PushToTalkButton />
         <ErrorPanel />
       </PushToTalkButtonContainer> */}
-      <Home />
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
     </>
   );
 };

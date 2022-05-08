@@ -66,14 +66,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    button  {
-        padding: .6rem;
-        cursor: pointer;
-        outline: none;
-        border: none;
-        background: #F0A202;
-        font-size: large;
-        font-weight: bolder;
+    a {
+      text-decoration: none;
+      padding: 0.6rem;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: #f0a202;
+      font-size: large;
+      font-weight: bolder;
+      &:hover {
+        opacity: .9;
+      }
     }
   }
   .footer {

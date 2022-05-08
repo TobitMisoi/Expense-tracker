@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ExpenseIllustration from "../../assets/svg/house_expense.svg";
 import Blob from "../../assets/svg/savings-money-svgrepo-com.svg";
 import Savings from "../../assets/svg/savings-svgrepo-com.svg";
@@ -46,7 +47,7 @@ function Home() {
       <section>
         <h2>Ready to track your expense?</h2>
         <br />
-        <button onClick={() => console.log("goto Dashboard")}> Get Started now</button>
+        <Link to="dashboard"> Get Started now</Link>
       </section>
       <footer className='footer'>
         <div>
